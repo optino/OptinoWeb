@@ -1,0 +1,107 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+ 
+}
+
+
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
+nav > .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  width: 16em;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+li {
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  border-radius: 1.5rem;
+  padding: .2em .5em;
+  z-index: 4;
+  margin: 0 .25em;
+}
+footer {
+  position: fixed;
+  height: 50px;
+  background-color: red;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+li .background {
+  background: var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: -1;
+  display: none;
+  will-change: transform;
+}
+li svg {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  opacity: 0.4;
+  -webkit-transition: opacity var(--duration);
+  transition: opacity var(--duration);
+}
+li > .label {
+  display: none;
+  margin-left: .5rem;
+  font-size: .6em;
+}
+
+li[data-active] .label {
+  display: block;
+  opacity: 1;
+  width: auto;
+}
+li[data-active] .background {
+  display: block;
+}
+li[data-active] > svg {
+  opacity: 1;
+}
