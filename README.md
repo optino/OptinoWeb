@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/optino/OptinoWeb) 
+
 # OptinoWeb
 A PWA for opinion pool 
 # add this line  for google verification in sites 
